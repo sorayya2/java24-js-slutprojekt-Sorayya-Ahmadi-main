@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>FilmAppTMDB</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <h1> 🎬 FilmApp</h1>
+
+  <div id="controls">
+  <form id="search-form" onsubmit="event.preventDefault()">
+    <input id="searchInput" type="text" name="search" placeholder="Sök film eller person">
+    <!-- <button type="submit">Sök</button> -->
+    <button id="searchBtn"> Search</button>
+</form>
+
+  <button id="topRatedBtn">Top Rated</button>
+  <button id="popularBtn">Popular</button>
+
+  <select id="sort-select">
+    <option value="name-asc">A-Ö</option>
+    <option value="name-desc">Ö-A</option>
+    <option value="popularity-asc">Popularitet ↑</option>
+    <option value="popularity-desc">Popularitet ↓</option>
+  </select>
+</div>
+
+  <div id="movieList" class="movies-grid"></div>
+
+  <h2 id="personHeading" class="center-heading" style="display: none; text-align: center;">Personer</h2>
+  <div id="personList"></div>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
